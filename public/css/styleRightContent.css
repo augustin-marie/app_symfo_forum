@@ -1,0 +1,45 @@
+.trendingItems{
+    background-color: var(--color-white);
+    margin-bottom: 10px;
+    padding: 4px;
+}
+
+.listUser{
+    margin: 2px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-template-areas: "number element text";
+}
+
+.listTag{
+    margin: 2px 0px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "number element text";  
+}
+
+.listNumber{
+    grid-area: number;
+}
+
+.listElement{
+    grid-area: element;
+}
+
+.title{
+    font-size: 20px;
+}
+
+.title:after{
+    content : "";
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 90%;
+
+    border-bottom: 2px dotted var(--color-black-4);
+
+    margin-bottom: 5px;
+}

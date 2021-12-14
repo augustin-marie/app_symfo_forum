@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fill{% endblock %}
+
+{% block body %}
+<div id="container">
+		<div id="leftPannel">
+			{{ include('post/index.html.twig')}}
+		</div>
+
+
+		<div id="rightPanel">
+			{{ include('trendingTag/index.html.twig')}}
+
+			{{ include('trendingUsers/index.html.twig')}}
+		</div>
+	</div>
+{% endblock %}
