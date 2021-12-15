@@ -4,15 +4,16 @@
 
 {% block body %}
 <div id="container">
-		<div id="leftPannel">
-			{{ include('post/index.html.twig')}}
-		</div>
+	<div id="leftPannel">
+        {% block formNewPost %}{% endblock %}
 
-
-		<div id="rightPanel">
-			{{ include('trendingTag/index.html.twig')}}
-
-			{{ include('trendingUsers/index.html.twig')}}
-		</div>
+		{{ include('post/index.html.twig')}}
 	</div>
+
+	<div id="rightPanel">
+		{{ include('trendingTag/index.html.twig')}}
+
+		{{ include('trendingUsers/index.html.twig')}}
+	</div>
+</div>
 {% endblock %}

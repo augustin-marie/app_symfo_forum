@@ -269,3 +269,24 @@ footer{
   right: 0;
 }
 */
+
+#formPost{
+  background-color: var(--color-white);
+  margin-bottom: 10px;
+  padding: 4px;
+}
+
+.inputText{
+  width: calc(100% - 8px);
+  resize: none;
+}
+
+.purpleButton{
+  background-color: var(--color-purple-1);
+  color: var(--color-white);
+}
+
+.purpleButton:hover{
+  background-color: var(--color-purple-2);
+  color: var(--color-white);
+}
