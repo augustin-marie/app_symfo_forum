@@ -1,8 +1,11 @@
+{% block listPosts %}
+
+{% for post in posts %}
 <div class="post">
 	<div class="postInfos">
 	    <div class="simpleSeparator">
 			<div class="leftPannel">
-				<span class="postUserName">Username</span>
+				<span class="postUserName">{{ post.IdUtilisateur.Username }}</span>
 			</div>
 			<div class="rightPanel">
 				<span class="Tag green">Tag4</span>
@@ -13,7 +16,7 @@
 	</div>
 
 	<div class="postContent">
-		Nulla auctor porta gravida. Fusce at lectus eu dui suscipit consequat at in leo. Nam nec ullamcorper urna. Duis nec erat ac neque venenatis vulputate at at ligula. Curabitur a magna ut massa lacinia malesuada id non quam. Proin diam.  
+		{{ post.Text }}
 	</div>
 
 	<div class="postAction simpleSeparator">
@@ -27,11 +30,14 @@
 		</div>
 		<div class="rightPanel">
 			<span class="postUpvote">
-				<span class="upVoteButton"><i class="fas fa-arrow-up icon"></i></span><span>10254</span>
+				<span class="upVoteButton"><i class="fas fa-arrow-up icon"></i></span><span>{{ post.UpVotes }}</span>
 			</span>
 			<span class="postDownvote">
-				<span class="downVoteButton"><i class="fas fa-arrow-down icon"></i></span><span>1025</span>
+				<span class="downVoteButton"><i class="fas fa-arrow-down icon"></i></span><span>{{ post.DownVotes}}</span>
 			</span>
 		</div>
 	</div>
 </div>
+{% endfor %}
+
+{% endblock %}

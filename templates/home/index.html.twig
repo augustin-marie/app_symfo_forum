@@ -5,9 +5,14 @@
 {% block body %}
 <div id="container">
 	<div id="leftPannel">
-        {% block formNewPost %}{% endblock %}
 
-		{{ include('post/index.html.twig')}}
+		{% block formNewPost %}
+        {% endblock %}
+
+		{% block listPosts %}
+			{{ render(controller('App\\Controller\\ListPostController::index')) }}
+		{% endblock %}
+
 	</div>
 
 	<div id="rightPanel">
